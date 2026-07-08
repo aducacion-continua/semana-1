@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario sencillo (solo HTML)</title>
+  <!-- Sin CSS, sin JavaScript – solo estructura HTML -->
+</head>
+<body>
+
+  <h2>Formulario de contacto</h2>
+  <p>Completa los campos y envía el formulario.</p>
+
+  <!-- 
+    El formulario usa método GET para que los datos se vean en la URL,
+    y action="#" para que recargue la misma página.
+    Sin CSS, sin JavaScript, solo HTML puro.
+  -->
+  <form action="#" method="get">
+
+    <!-- Campo: nombre (texto) -->
+    <label for="nombre">Nombre completo:</label><br>
+    <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Pérez" required><br><br>
+
+    <!-- Campo: correo electrónico -->
+    <label for="email">Correo electrónico:</label><br>
+    <input type="email" id="email" name="email" placeholder="tu@correo.com" required><br><br>
+
+    <!-- Campo: teléfono (opcional) -->
+    <label for="telefono">Teléfono (opcional):</label><br>
+    <input type="tel" id="telefono" name="telefono" placeholder="123-456-7890"><br><br>
+
+    <!-- Selector de país (lista desplegable) -->
+    <label for="pais">País:</label><br>
+    <select id="pais" name="pais">
+      <option value="es">España</option>
+      <option value="mx">México</option>
+      <option value="ar">Argentina</option>
+      <option value="co">Colombia</option>
+      <option value="us">Estados Unidos</option>
+      <option value="otro">Otro</option>
+    </select><br><br>
+
+    <!-- Área de texto para mensaje -->
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" cols="40" placeholder="Escribe tu mensaje aquí..." required></textarea><br><br>
+
+    <!-- Campo oculto (solo para demostración, no se muestra) -->
+    <input type="hidden" name="formulario_enviado" value="true">
+
+    <!-- Grupo de radio: género (obligatorio) -->
+    <fieldset>
+      <legend>Género (requerido):</legend>
+      <input type="radio" id="masculino" name="genero" value="masculino" required>
+      <label for="masculino">Masculino</label><br>
+      <input type="radio" id="femenino" name="genero" value="femenino">
+      <label for="femenino">Femenino</label><br>
+      <input type="radio" id="otro_genero" name="genero" value="otro">
+      <label for="otro_genero">Otro</label><br>
+      <input type="radio" id="prefiero_no_decir" name="genero" value="prefiero_no_decir">
+      <label for="prefiero_no_decir">Prefiero no decir</label>
+    </fieldset>
+    <br>
+
+    <!-- Checkbox: aceptar términos (obligatorio) -->
+    <input type="checkbox" id="terminos" name="terminos" value="acepto" required>
+    <label for="terminos">Acepto los términos y condiciones</label>
+    <br><br>
+
+    <!-- Botones de envío y reinicio -->
+    <button type="submit">Enviar formulario</button>
+    <button type="reset">Limpiar campos</button>
+
+  </form>
+
+  <hr>
+
+  <footer>
+    <p><small>Formulario creado exclusivamente con HTML — sin CSS ni JavaScript.</small></p>
+    <!-- Nota: los campos con required no permitirán enviar si están vacíos -->
+  </footer>
+
+</body>
+</html>
